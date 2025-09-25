@@ -1,7 +1,14 @@
- <header>
-  <img src="img.jpg" alt="Main programmer">
-    <h1> WAISWA JABRON WEBSITE</h1>
-    <p>Web Developer | Designer | Creator</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
   </header>
 
   <nav>
@@ -13,12 +20,8 @@
   </nav>
 
   <section>
-   <p>
-    
- I am an enthusiastic HTML developer with a deep passion for creating clean, structured, and semantic web pages. My journey in web development began with a curiosity for how websites are built, and over time, I have specialized in crafting pages that are accessible, responsive, and visually appealing. HTML forms the backbone of my skill set, and I take pride in using it to build strong foundations for websites and applications.
- 
- Iam a student at ndejje university persuing bachalor in Information Technology
-</p>
+    <h2>Who I Am</h2>
+    <p>Hello! I am a passionate web developer who enjoys creating beautiful, responsive, and user-friendly websites.</p>
   </section>
 
   <footer>
@@ -26,5 +29,3 @@
   </footer>
 </body>
 </html>
-
-
