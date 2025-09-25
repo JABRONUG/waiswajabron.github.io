@@ -18,7 +18,6 @@
       <li>HTML5, CSS3, )</li>
       <li>React, Bootstrap, Tailwind CSS</li>
       <li>Git & GitHub Collaboration</li>
-      
     </ul>
   </section>
 
