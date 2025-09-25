@@ -43,8 +43,7 @@
     <h2>Contact</h2>
     <p>
       📧 Email: jabron456@gmail.com <br>
-      💼 LinkedIn: <a href="#">linkedin.com/in/waiswajabron</a>
-        
+      💼 LinkedIn: <a href="#">linkedin.com/in/waiswajabron</a>   
      TEL: +256-752903961 
     
   </section>
