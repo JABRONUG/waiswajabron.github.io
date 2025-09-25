@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JABRON A NOVCE DEVELOPER — Portfolio</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#7c3aed;--muted:#9aa4b2;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:#e6eef6;line-height:1.5}
+    header{backdrop-filter:blur(6px);background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);position:sticky;top:0;z-index:40}
+    .container{max-width:1000px;margin:0 auto;padding:28px}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .navlinks{display:flex;gap:14px}
+    .navlinks a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    .navlinks a.active, .navlinks a:hover{color:white;background:var(--glass)}
+
+    main{padding:44px 0}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    h1{font-size:28px;margin:0 0 6px}
+    p.lead{color:var(--muted);margin:0}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px;color:var(--muted);font-size:13px}
+
+    /* Portfolio */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .project{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .meta{font-size:13px;color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:28px;color:var(--muted)}
+
+    /* Simple page routing */
+    section.page{display:none}
+    section.page.active{display:block}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .logo{width:40px;height:40px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo">WJ</div>
+          <div>
+            <div style="font-weight:700">WAISWA JABRON</div>
+            <div style="font-size:12px;color:var(--muted)">A student of BIT at ndejje university</div>
+          </div>
+        </div>
+        <div class="navlinks" role="navigation" aria-label="Main">
+          <a href="#home" data-target="home" class="active">Home</a>
+          <a href="#about" data-target="about">About</a>
+          <a href="#portfolio" data-target="portfolio">Portfolio</a>
+          <a href="#gallery" data-target="gallery">Gallery</a>
+          <a href="#contact" data-target="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Home -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <div>
+          <div class="card">
+            <h1>Hi — I'm Waiswa jabron, a novice developer learning by building.</h1>
+            <p class="lead">I enjoy turning ideas into interactive web pages. Currently focused on HTML, CSS, J. I am aself motivated learner willing to create path in my carrier of programming</p>
+
+            <div class="skills Focused on">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">Accessibility</span>
+            </div>
+
+            <div class="cta">
+              <a class="secondary" href="#contact" data-target="contact"> direct Message</a>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div style="font-weight:700">Mr Bazanya</div>
+            <div class="meta">Lecturer Website technologies — Here for you for any inquirely </div>
+            <div style="margin-top:10px">
+              <a class="btn" href="#contact" data-target="contact">Please contact him for guidance</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="page">
+      <div class="card">
+        <h2>About me</h2>
+        <p>I started coding a year ago and quickly fell in love with building small web pages. I am motivated by my senoir lecturer Mr Bazanya. My priorities are readability, accessibility, and progressive enhancement.</p>
+        <h3 style="margin-top:12px">My learning path</h3>
+        <ul>
+          <li>Foundations: HTML, CSS,</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="page">
+      <div class="card">
+        <h2>Portfolio</h2>
+        <p class="meta">learning exercises Strictly in:.</p>
+        <div class="grid">
+          <article class="project">
+            <h3>IN FOCUS</h3>
+            <p>My forcus is to become a well vast developer not only with HTML,CSS but also with other programming languages .</p>
+          </article>
+
+          <article class="project">
+            <h3>MAIN OBJECTIVES</h3>
+            <div class="meta">React • LocalStorage • Accessible</div>
+            <p>Storing tasks in localStorage, keyboard shortcuts, andattributes for screen readers.</p>
+          </article>
+
+          <article class="project">
+            <h3>CORE LANGUAGES </h3>
+            <div class="Websites are </div>
+            <p>Websites are developed in many languages i.e HTML, CSS, JAVA among others.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="page">
+      <div class="card">
+        <h2>Gallery</h2>
+        <p class="meta">Screenshots and thumbnails from projects.</p>
+        <div class="gallery" aria-live="polite">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%25' height='100%25' fill='%23313a45'/><text x='50%25' y='50%25' fill='%23fff' font-size='18' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Project 1</text></svg>" alt="Project screenshot 1">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%25' height='100%25' fill='%233a2b36'/><text x='50%25' y='50%25' fill='%23fff' font-size='18' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Project 2</text></svg>" alt="Project screenshot 2">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%25' height='100%25' fill='%233a3f2b'/><text x='50%25' y='50%25' fill='%23fff' font-size='18' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Project 3</text></svg>" alt="Project screenshot 3">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%25' height='100%25' fill='%232b3a3f'/><text x='50%25' y='50%25' fill='%23fff' font-size='18' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Project 4</text></svg>" alt="Project screenshot 4">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="page">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="meta">I'd love to hear about opportunities — internships, mentorship, or freelance.</p>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <label>
+            <div style="font-size:13px;margin-bottom:6px;color:var(--muted)">Name</div>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            <div style="font-size:13px;margin-bottom:6px;color:var(--muted)">Email</div>
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            <div style="font-size:13px;margin-bottom:6px;color:var(--muted)">Message</div>
+            <textarea name="message" required placeholder="Tell me about the role or project"></textarea>
+          </label>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn" type="submit">Send message</button>
+            <div id="status" style="color:var(--muted);font-size:13px"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;max-width:1000px">
+        <div><strong>Coding is the way to go</strong> —Copyright @jabronwaiswa .</div>
+        <div class="meta">jabron456@gmail.com</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple hash-based single-file router
+    const links = document.querySelectorAll('[data-target]');
+    const pages = document.querySelectorAll('section.page');
+    function showPage(id){
+      pages.forEach(p=>p.classList.toggle('active', p.id===id));
+      links.forEach(a=>a.classList.toggle('active', a.dataset.target===id));
+    }
+    function handleHash(){
+      const h = location.hash.replace('#','') || 'home';
+      showPage(h);
+    }
+    window.addEventListener('hashchange', handleHash);
+    links.forEach(a=>a.addEventListener('click', e=>{
+      // let hashchange handle it
+      links.forEach(l=>l.classList.remove('active'));
+      a.classList.add('active');
+    }));
+    handleHash();
+
+    // Contact form (demo-only): it doesn't send email but shows a friendly message
+    function handleSubmit(e){
+      e.preventDefault();
+      const status = document.getElementById('status');
+      const form = e.target;
+      status.textContent = 'Sending...';
+      // Simulate async send (purely client-side)
+      setTimeout(()=>{
+        status.textContent = 'Thanks — message received (demo).';
+        form.reset();
+      },700);
+    }
+  </script>
+</body>
+</html>
